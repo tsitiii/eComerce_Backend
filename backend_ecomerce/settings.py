@@ -16,7 +16,12 @@ SECRET_KEY = 'django-insecure-1k!0j_2u(ao@52c8=r=l1xc9ps1f4k8f8b&b*6teqf)%nn5c@5
 
 # DEBUG = os.getenv('DEBUG') == 'True'
 DEBUG = True
-ALLOWED_HOSTS =[]
+ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1', 'localhost']
+
+import os
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') 
 
 
 INSTALLED_APPS = [
